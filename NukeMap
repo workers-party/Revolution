@@ -10,7 +10,7 @@ class Main is Game
 
    
     action CreateGame
-    background:Load("resources/")
+    background:Load("resources/nuketown.png")
     Add(background)
     end
 
