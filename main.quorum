@@ -35,8 +35,18 @@ SetScreenSize(1024, 576)
     Add(background)    
 point1:LoadFilledTriangle(30,40,50,10,10,10)
 point1:SetSize(10,10)
-point1:SetPosition(1024/2, 576/2)
+point1:SetPosition(1024/2 + 250, 576/2)
 Add(point1)
+//point 2
+point2:LoadFilledTriangle(30,40,50,10,10,10)
+point2:SetSize(10,10)
+point2:SetPosition(1024/3 - 40, 576/3 + 105)
+Add(point2)
+//point3
+point3:LoadFilledTriangle(30,40,50,10,10,10)
+point3:SetSize(10,10)
+point3:SetPosition(470,450)
+Add(point3)
 end
 
   
