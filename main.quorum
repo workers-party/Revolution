@@ -1,0 +1,45 @@
+use Libraries.Game.Game
+use Libraries.Game.all
+use Libraries.Game.Graphics.Drawable
+use Libraries.Game.Graphics.all
+use Libraries.Game.Physics.all
+use Libraries.Game.GameInput
+use Libraries.Interface.Events.KeyboardEvent
+use Libraries.Game.InputMonitor
+use Libraries.Interface.Item2D
+use Libraries.Interface.Events.CollisionListener2D
+use Libraries.Compute.Vector2
+use Libraries.Interface.Events.KeyboardEvent
+use Libraries.Interface.Events.KeyboardListener
+use Libraries.Game.Graphics.ImageSheet
+
+class Main is Game
+Color color
+//Drawables
+    Drawable background
+  Drawable nukeCirc
+  Drawable point1
+   Drawable point2
+    Drawable point3
+//Labels
+Label label
+    action Main
+        StartGame()
+    end
+
+  
+    action CreateGame
+SetScreenSize(1024, 576)
+    background:Load("resources/nuketown.png")
+    background:SetSize(1024, 576)
+    Add(background)    
+point1:LoadFilledTriangle(30,40,50,10,10,10)
+point1:SetSize(10,10)
+point1:SetPosition(1024/2, 576/2)
+Add(point1)
+end
+
+  
+    action Update(number seconds)
+    end
+end
