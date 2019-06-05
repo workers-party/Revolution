@@ -10,6 +10,8 @@ class Main is Game
 
    
     action CreateGame
+    background:Load("resources/")
+    Add(background)
     end
 
    
