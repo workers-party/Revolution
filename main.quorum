@@ -10,10 +10,14 @@ use Libraries.Interface.Item2D
 use Libraries.Interface.Events.CollisionListener2D
 use Libraries.Compute.Vector2
 use Libraries.Interface.Events.KeyboardEvent
-use Libraries.Interface.Events.KeyboardListener
+use Libraries.Interface.Events.all
 use Libraries.Game.Graphics.ImageSheet
 
-class Main is Game
+class Main is Game, MouseListener
+//Keyboard
+InputMonitor monitor
+KeyboardEvent keys
+//color
 Color color
 //Drawables
     Drawable background
@@ -48,10 +52,13 @@ Add(point2)
 point3:LoadFilledTriangle(30,40,50,10,10,10)
 point3:SetSize(10,10)
 point3:SetPosition(470,450)
+
 Add(point3)
 end
 
   
     action Update(number seconds)
     end
+    action ClickedMouse(MouseEvent event)
+end
 end
