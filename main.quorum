@@ -21,6 +21,8 @@ Color color
   Drawable point1
    Drawable point2
     Drawable point3
+    Drawable missile
+    Drawable missilepath
 //Labels
 Label label
     action Main
