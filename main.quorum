@@ -36,7 +36,7 @@ Label label
   
     action CreateGame
 SetScreenSize(1024, 576)
-    background:Load("resources/nuketown.png")
+    background:Load("nuketown.png")
     background:SetSize(1024, 576)
     Add(background)    
 point1:LoadFilledTriangle(30,40,50,10,10,10)
