@@ -14,46 +14,46 @@ use Libraries.Interface.Events.all
 use Libraries.Game.Graphics.ImageSheet
 
 class Main is Game, MouseListener
-//Keyboard
-InputMonitor monitor
-KeyboardEvent keys
-//color
-Color color
-//Drawables
+    //Keyboard
+    InputMonitor monitor
+    KeyboardEvent keys
+    //color
+    Color color
+    //Drawables
     Drawable background
-  Drawable nukeCirc
-  Drawable point1
-   Drawable point2
+    Drawable nukeCirc
+    Drawable point1
+    Drawable point2
     Drawable point3
     Drawable missile
     Drawable missilepath
-//Labels
-Label label
+    //Labels
+    Label label
     action Main
         StartGame()
     end
 
   
     action CreateGame
-SetScreenSize(1024, 576)
-    background:Load("nuketown.png")
-    background:SetSize(1024, 576)
-    Add(background)    
-point1:LoadFilledTriangle(30,40,50,10,10,10)
-point1:SetSize(10,10)
-point1:SetPosition(1024/2 + 250, 576/2)
-Add(point1)
-//point 2
-point2:LoadFilledTriangle(30,40,50,10,10,10)
-point2:SetSize(10,10)
-point2:SetPosition(1024/3 - 40, 576/3 + 105)
-Add(point2)
-//point3
-point3:LoadFilledTriangle(30,40,50,10,10,10)
-point3:SetSize(10,10)
-point3:SetPosition(470,450)
+        SetScreenSize(1024, 576)
+        background:Load("nuketown.png")
+        background:SetSize(1024, 576)
+        Add(background)    
+        point1:LoadFilledTriangle(30,40,50,10,10,10)
+        point1:SetSize(10,10)
+        point1:SetPosition(1024/2 + 250, 576/2)
+        Add(point1)
+        //point 2
+        point2:LoadFilledTriangle(30,40,50,10,10,10)
+        point2:SetSize(10,10)
+        point2:SetPosition(1024/3 - 40, 576/3 + 105)
+         Add(point2)
+         //point3
+        point3:LoadFilledTriangle(30,40,50,10,10,10)
+        point3:SetSize(10,10)
+        point3:SetPosition(470,450)
 
-Add(point3)
+        Add(point3)
 end
 
   
