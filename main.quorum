@@ -47,14 +47,15 @@ class Main is Game, MouseListener
         //point 2
         point2:LoadFilledTriangle(30,40,50,10,10,10)
         point2:SetSize(10,10)
-        point2:SetPosition(1024/3 - 40, 576/3 + 105)
-         Add(point2)
-         //point3
+        point2:SetPosition(575,465)
+        Add(point2)
+        point2:SetColor(color:Red())
+        //point3
         point3:LoadFilledTriangle(30,40,50,10,10,10)
         point3:SetSize(10,10)
-        point3:SetPosition(470,450)
-
+        point3:SetPosition(170,415)
         Add(point3)
+        point3:SetColor(color:Blue())
 end
 
   
