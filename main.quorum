@@ -27,6 +27,7 @@ class Main is Game, MouseListener
     Drawable point3
     Drawable missile
     Drawable missilepath
+    Drawable target
     //Labels
     Label label
     action Main
@@ -60,5 +61,7 @@ end
     action Update(number seconds)
     end
     action ClickedMouse(MouseEvent event)
+        if monitor:IsClicked()
+            
 end
 end
