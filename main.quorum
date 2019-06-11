@@ -30,6 +30,8 @@ class Main is Game, MouseListener
     Drawable target
     //Labels
     Label label
+    Audio missileSound
+    Audio impactSound
     action Main
         StartGame()
     end
