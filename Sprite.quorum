@@ -1,0 +1,16 @@
+use Libraries.Game.Graphics.Drawable
+use Libraries.Containers.Queue
+
+class Sprite is Drawable
+
+    action Main
+        LoadFilledTriangle(30,40,50,10,10,10)
+        SetSize(10,10)
+    end
+    action Launch(Drawable target)
+    SetPosition(target:GetX(),target:GetY())
+    end
+    action MoveTo(number x, number y)
+    
+    end
+end
