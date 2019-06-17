@@ -29,7 +29,14 @@ class Main is Game, MouseListener
     Drawable missilepath
     Drawable target
     //Labels
-    Label label
+Label label1
+Label label2
+Label label3
+Label countdown
+//int
+integer count = 50
+//bool
+boolean ctrue = false
     Audio missileSound
     Audio impactSound
     action Main
@@ -58,13 +65,35 @@ class Main is Game, MouseListener
         point3:SetPosition(170,415)
         Add(point3)
         point3:SetColor(color:Blue())
+        
+        //Labels
+countdown:SetText("Launching in ")
+countdown:SetPosition(50, 200)
+
+label1:SetText("The triangles are where you are launching from
+ and the squares are your targets")
+label1:SetPosition(5, 100)
+Add(label1)
+
+label2:SetText("Press A,B or C 
+to choose where to launch")
+label2:SetPosition(5, 200)
+Add(label2)
 end
 
   
     action Update(number seconds)
-    end
-    action ClickedMouse(MouseEvent event)
-        if monitor:IsClicked()
-            
+    if monitor:IsKeyPressed(Keys:SPACE)
+Add(countdown)
+ctrue = true
 end
+countdown:SetText("Launching in " + count/10)
+if count > 0 and ctrue = true
+count = count - 1
+elseif ctrue = false
+count = 50
+end
+  
+    end
+   
 end
