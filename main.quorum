@@ -28,9 +28,11 @@ class Main is Game, MouseListener
     Drawable point2
     Drawable point3
     Drawable point4
-    Drawable missile
+    Sprite nuke
     Drawable missilepath
-    Drawable target
+    Drawable target1
+     Drawable target2
+      Drawable target3
     //Labels
 Label label1
 Label label2
@@ -89,6 +91,14 @@ label2:SetText("Press A,B or C
 to choose where to launch")
 label2:SetPosition(5, 200)
 Add(label2)
+
+label3:SetText("Press 1,2 or 3 
+to choose where to launch")
+label3:SetPosition(5, 150)
+Add(label3)
+//nuke
+nuke:Main()
+Add(nuke)
 end
 
   
@@ -103,7 +113,42 @@ count = count - 1
 elseif ctrue = false
 count = 50
 end
-  
+     if monitor:IsKeyPressed(Keys:A)
+    nuke:Launch(point1)
     end
+if monitor:IsKeyPressed(Keys:B)
+    nuke:Launch(point2)
+    end
+if monitor:IsKeyPressed(Keys:C)
+    nuke:Launch(point3)
+    end
+if monitor:IsKeyPressed(Keys:NUM_1)
+   MovementR(target1)
+ 
+    end
+if monitor:IsKeyPressed(Keys:NUM_2)
+   MovementR(target2)
+ 
+    end
+if monitor:IsKeyPressed(Keys:NUM_3)
+   MovementR(target3)
+    end
+    end
+action MovementR(Drawable target)
+if nuke:GetX() > target:GetX()
+nuke:MoveX(-1)
+elseif nuke:GetX() = target:GetX()
+   nuke:MoveX(0) 
+end
+end
+action MovementL(Drawable target)
+if nuke:GetX() < target:GetX()
+nuke:MoveX(1)
+elseif nuke:GetX() = target:GetX() 
+     nuke:MoveX(0)
+   
+end
+end 
+   
    
 end
